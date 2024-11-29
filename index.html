@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of Rome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Code of Rome</h1>
+            <p class="subtitle">Enter the mind of Rome and decrypt its secrets.</p>
+        </header>
+        <main>
+            <section class="game-section">
+                <button id="startButton" class="btn">Start</button>
+                <div class="cipher-container">
+                    <p>Encrypted Text: <span id="cipherText">---</span></p>
+                </div>
+                <textarea id="inputText" placeholder="Enter your decryption here..."></textarea>
+                <button id="checkButton" class="btn" disabled>Check Answer</button>
+                <p id="resultMessage" class="message"></p>
+                <p id="solvedCounter" class="counter">Phrases solved: 0/10</p>
+                <p id="timeTaken" class="time">Time Taken: <span id="time">--</span> seconds</p>
+            </section>
+        </main>
+        <footer>
+            <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
+            <p class="credits">Developed by Oheka</p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
