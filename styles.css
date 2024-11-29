@@ -1,0 +1,98 @@
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background: #f3e5d0 url('https://www.transparenttextures.com/patterns/old-wall.png') repeat;
+    color: #3e2723;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #5d4037;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #5d4037;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fbf5dc;
+    border: 10px solid #d7ccc8;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.game-section {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    margin: 15px 0;
+    font-family: 'Cormorant', serif;
+    font-size: 1.2rem;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #6b4423;
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #6b4423;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5d4037;
+}
+
+.message {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.message.success {
+    color: green;
+}
+
+.message.error {
+    color: red;
+}
+
+.counter, .time {
+    font-size: 1.2rem;
+    color: #5d4037;
+    margin-top: 10px;
+}
+
+.footer-quote {
+    font-style: italic;
+    color: #5d4037;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: #5d4037;
+}
