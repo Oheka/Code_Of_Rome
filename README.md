@@ -11,5 +11,5 @@ Access the game: (https://www.codeofrome.com/)
 ---
 *Fortuna audaces iuvat*
 
-![Code of Rome Logo](IMG/Code_Of_Rome.png)
+![Code of Rome Logo](Code_Of_Rome.png)
 
