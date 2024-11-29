@@ -4,9 +4,12 @@
 
 ---
 
-## 🌐 **Live Application**
+## 🎮**Live Application**
 
 Access the game: (https://www.codeofrome.com/)
 
 ---
 *Fortuna audaces iuvat*
+
+![Code of Rome Logo](IMG/Code_Of_Rome.png)
+
