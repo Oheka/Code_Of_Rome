@@ -4,7 +4,7 @@
 
 ---
 
-## 🎮**Live Application**
+## 🎮 **Live Application**
 
 Access the game: (https://www.codeofrome.com/)
 
