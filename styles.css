@@ -2,7 +2,9 @@ body {
     font-family: 'Cinzel', serif;
     margin: 0;
     padding: 0;
-    background: #2d2a26;
+    background: linear-gradient(135deg, #2d2a26, #3b352f);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
     color: #f8e9d4;
     text-align: center;
     line-height: 1.6;
@@ -52,19 +54,48 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-.common-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+.game-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(182, 139, 80, 0.5);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #b68b50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #8a6a40;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cipher-container {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     background: rgba(182, 139, 80, 0.2);
-    border: 2px dashed #b68b50;
+    border: 2px solid #b68b50;
     padding: 15px;
     border-radius: 10px;
     box-sizing: border-box;
@@ -86,6 +117,8 @@ body {
 .input-text {
     display: block;
     width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
     height: 120px;
     padding: 15px;
     font-size: 1rem;
@@ -93,59 +126,15 @@ body {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
     color: #f8e9d4;
-    box-sizing: border-box;
     resize: vertical;
     margin: 15px auto;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .input-text:focus {
     outline: none;
     border-color: #8a6a40;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background: #b68b50;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 10px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn:hover {
-    background: #8a6a40;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-}
-
-.message {
-    font-size: 1.2rem;
-    padding: 10px;
-    margin: 15px 0;
-    border-radius: 8px;
-}
-
-.message.success {
-    background: rgba(76, 175, 80, 0.1);
-    color: #4caf50;
-}
-
-.message.error {
-    background: rgba(244, 67, 54, 0.1);
-    color: #f44336;
-}
-
-.info {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color: #b68b50;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .footer {
@@ -181,5 +170,17 @@ body {
 
     .input-text {
         height: 100px;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
