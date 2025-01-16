@@ -8,29 +8,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <header>
+    <header class="header">
+        <div class="overlay">
             <h1>Code of Rome</h1>
             <p class="subtitle">Enter the mind of Rome and decrypt its secrets.</p>
-        </header>
-        <main>
-            <section class="game-section">
-                <button id="startButton" class="btn">Start</button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="game-container">
+            <div class="common-container">
                 <div class="cipher-container">
-                    <p>Encrypted Text: <span id="cipherText">---</span></p>
+                    <p class="cipher-title">Encrypted Text:</p>
+                    <p id="cipherText" class="cipher-text">---</p>
                 </div>
-                <textarea id="inputText" placeholder="Enter your decryption here..."></textarea>
-                <button id="checkButton" class="btn" disabled>Check Answer</button>
-                <p id="resultMessage" class="message"></p>
-                <p id="solvedCounter" class="counter">Phrases solved: 0/10</p>
-                <p id="timeTaken" class="time">Time Taken: <span id="time">--</span> seconds</p>
-            </section>
-        </main>
-        <footer>
-            <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
-            <p class="credits">Developed by Oheka</p>
-        </footer>
-    </div>
+                <textarea id="inputText" class="input-text" placeholder="Enter your decryption here..."></textarea>
+            </div>
+            <button id="startButton" class="btn">Start Game</button>
+            <button id="checkButton" class="btn btn-check" disabled>Check Answer</button>
+            <p id="resultMessage" class="message"></p>
+            <p id="solvedCounter" class="info">Phrases solved: 0/10</p>
+            <p id="timeTaken" class="info">Time Taken: <span id="time">--</span> seconds</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
+        <p class="credits">Developed by Oheka</p>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
