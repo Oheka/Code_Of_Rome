@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code of Rome</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header">
-        <div class="overlay">
-            <h1>Code of Rome</h1>
-            <p class="subtitle">Enter the mind of Rome and decrypt its secrets.</p>
-        </div>
-    </header>
-    <main class="main">
-        <div class="game-container">
-            <div class="common-container">
-                <div class="cipher-container">
-                    <p class="cipher-title">Encrypted Text:</p>
-                    <p id="cipherText" class="cipher-text">---</p>
-                </div>
-                <textarea id="inputText" class="input-text" placeholder="Enter your decryption here..."></textarea>
-            </div>
-            <button id="startButton" class="btn">Start Game</button>
-            <button id="checkButton" class="btn btn-check" disabled>Check Answer</button>
-            <p id="resultMessage" class="message"></p>
-            <p id="solvedCounter" class="info">Phrases solved: 0/10</p>
-            <p id="timeTaken" class="info">Time Taken: <span id="time">--</span> seconds</p>
-        </div>
-    </main>
-    <footer class="footer">
-        <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
-        <p class="credits">Developed by Oheka</p>
-    </footer>
-    <script src="scripts.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Test your skills with Code of Rome - a Caesar Cipher decryption challenge. Decrypt ancient Roman messages and prove your worth as a Roman scholar." />
+    <title>Code of Rome - Caesar Cipher Challenge</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
