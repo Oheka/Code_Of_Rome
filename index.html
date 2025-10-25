@@ -22,7 +22,7 @@
                     and prove yourself worthy of the Empire's secrets.
                 </p>
                 <button class="hero-btn" onclick="scrollToGame()">
-                    <span class="btn-icon">📜</span>
+                    <span class="btn-icon">🏛️</span>
                     Begin Your Quest
                 </button>
             </div>
@@ -81,6 +81,7 @@
                         placeholder="Enter your decrypted message here..."
                         disabled
                     ></textarea>
+                    <p class="input-hint">Hint: Caesar shifts by 1-25 positions.</p>
                 </div>
 
                 <div class="button-group">
@@ -89,7 +90,7 @@
                         Start Game
                     </button>
                     <button id="checkButton" class="btn btn-primary" onclick="checkAnswer()" disabled style="display: none;">
-                        <span class="btn-icon">🎯</span>
+                        <span class="btn-icon">🛡️</span>
                         Check Answer
                     </button>
                 </div>
@@ -100,21 +101,21 @@
             <!-- Stats Grid -->
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
+                    <div class="stat-icon">🏺</div>
                     <div class="stat-content">
                         <p class="stat-label">Phrases Solved</p>
                         <p class="stat-value" id="statSolved">0</p>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-icon">⏳</div>
                     <div class="stat-content">
                         <p class="stat-label">Last Time</p>
                         <p class="stat-value" id="statTime">--</p>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">🎯</div>
+                    <div class="stat-icon">📜</div>
                     <div class="stat-content">
                         <p class="stat-label">Accuracy</p>
                         <p class="stat-value" id="statAccuracy">100%</p>
@@ -138,7 +139,7 @@
     <div id="victoryModal" class="modal">
         <div class="modal-overlay" onclick="closeVictoryModal()"></div>
         <div class="modal-content">
-            <div class="modal-trophy">🏆</div>
+            <div class="modal-trophy">👑</div>
             <h2 class="modal-title" id="victoryTitle">Veni, Vidi, Vici!</h2>
             <p class="modal-subtitle">You have conquered all 10 challenges!</p>
             
@@ -154,7 +155,7 @@
             </div>
 
             <button class="btn btn-primary" onclick="playAgain()">
-                <span class="btn-icon">✨</span>
+                <span class="btn-icon">🔄</span>
                 Play Again
             </button>
         </div>
