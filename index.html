@@ -4,36 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code of Rome - Caesar Cipher Challenge</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Test your skills with Code of Rome - a Caesar Cipher decryption challenge. Decrypt ancient Roman messages and prove your worth as a Roman scholar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="overlay">
-            <h1>Code of Rome</h1>
-            <p class="subtitle">Enter the mind of Rome and decrypt its secrets.</p>
-        </div>
-    </header>
-    <main class="main">
-        <div class="game-container">
-            <div class="common-container">
-                <div class="cipher-container">
-                    <p class="cipher-title">Encrypted Text:</p>
-                    <p id="cipherText" class="cipher-text">---</p>
-                </div>
-                <textarea id="inputText" class="input-text" placeholder="Enter your decryption here..."></textarea>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Code of Rome</h1>
+                <p class="hero-subtitle">Enter the mind of Rome and decrypt its secrets.</p>
+                <p class="hero-description">
+                    Test your wit against the legendary Caesar Cipher. Decipher ancient Roman wisdom 
+                    and prove yourself worthy of the Empire's secrets.
+                </p>
+                <button class="hero-btn" onclick="scrollToGame()">
+                    <span class="btn-icon">📜</span>
+                    Begin Your Quest
+                </button>
             </div>
-            <button id="startButton" class="btn">Start Game</button>
-            <button id="checkButton" class="btn btn-check" disabled>Check Answer</button>
-            <p id="resultMessage" class="message"></p>
-            <p id="solvedCounter" class="info">Phrases solved: 0/10</p>
-            <p id="timeTaken" class="info">Time Taken: <span id="time">--</span> seconds</p>
         </div>
-    </main>
+        <div class="scroll-indicator">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game-section" class="game-section">
+        <div class="container">
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <h2 class="section-title">Your Progress</h2>
+                    <span class="progress-badge" id="progressBadge">0 / 10</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-markers">
+                        <div class="marker" data-numeral="I"></div>
+                        <div class="marker" data-numeral="II"></div>
+                        <div class="marker" data-numeral="III"></div>
+                        <div class="marker" data-numeral="IV"></div>
+                        <div class="marker" data-numeral="V"></div>
+                        <div class="marker" data-numeral="VI"></div>
+                        <div class="marker" data-numeral="VII"></div>
+                        <div class="marker" data-numeral="VIII"></div>
+                        <div class="marker" data-numeral="IX"></div>
+                        <div class="marker" data-numeral="X"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card -->
+            <div class="game-card">
+                <div class="card-corners"></div>
+                
+                <div class="cipher-display">
+                    <label class="cipher-label">Encrypted Text</label>
+                    <div class="cipher-box">
+                        <p class="cipher-text" id="cipherText">---</p>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <label class="input-label">Your Decryption</label>
+                    <textarea 
+                        id="inputText" 
+                        class="input-textarea" 
+                        placeholder="Enter your decrypted message here..."
+                        disabled
+                    ></textarea>
+                    <p class="input-hint">Hint: Caesar shifts by 1-25 positions.</p>
+                </div>
+
+                <div class="button-group">
+                    <button id="startButton" class="btn btn-primary" onclick="startGame()">
+                        <span class="btn-icon">✨</span>
+                        Start Game
+                    </button>
+                    <button id="checkButton" class="btn btn-primary" onclick="checkAnswer()" disabled style="display: none;">
+                        <span class="btn-icon">🎯</span>
+                        Check Answer
+                    </button>
+                </div>
+
+                <div id="feedbackMessage" class="feedback-message"></div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Phrases Solved</p>
+                        <p class="stat-value" id="statSolved">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Last Time</p>
+                        <p class="stat-value" id="statTime">--</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Accuracy</p>
+                        <p class="stat-value" id="statAccuracy">100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
-        <p class="credits">Developed by Oheka</p>
+        <div class="footer-content">
+            <p class="footer-quote">"Can you decrypt like a Roman scholar?"</p>
+            <div class="footer-divider"></div>
+            <p class="footer-credits">Developed by <strong>Oheka</strong></p>
+            <p class="footer-motto">Fortuna audaces iuvat</p>
+        </div>
     </footer>
+
+    <!-- Victory Modal -->
+    <div id="victoryModal" class="modal">
+        <div class="modal-overlay" onclick="closeVictoryModal()"></div>
+        <div class="modal-content">
+            <div class="modal-trophy">🏆</div>
+            <h2 class="modal-title" id="victoryTitle">Veni, Vidi, Vici!</h2>
+            <p class="modal-subtitle">You have conquered all 10 challenges!</p>
+            
+            <div class="modal-stats">
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Total Solved</p>
+                    <p class="modal-stat-value" id="modalSolved">10</p>
+                </div>
+                <div class="modal-stat">
+                    <p class="modal-stat-label">Accuracy</p>
+                    <p class="modal-stat-value" id="modalAccuracy">100%</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="playAgain()">
+                <span class="btn-icon">✨</span>
+                Play Again
+            </button>
+        </div>
+    </div>
+
+    <!-- Canvas for confetti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
