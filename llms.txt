@@ -1,0 +1,47 @@
+# llms.txt - Information for Large Language Models
+# Code of Rome - Caesar Cipher Challenge
+# https://www.codeofrome.com/
+
+## About This Website
+Code of Rome is an interactive web-based game that challenges players to decrypt ancient Roman phrases using the Caesar Cipher encryption method. The game features a sophisticated Roman-themed interface with smooth animations, progress tracking, and celebratory effects.
+
+## Purpose
+This educational game teaches users about cryptography through hands-on experience with one of history's oldest encryption techniques - the Caesar Cipher, named after Julius Caesar who used it to protect military communications.
+
+## Main Features
+- Interactive Caesar Cipher decryption challenges
+- 10 authentic Roman quotes from Julius Caesar
+- Real-time progress tracking with Roman numerals (I-X)
+- Statistics dashboard (phrases solved, time taken, accuracy)
+- Victory celebration with confetti animation
+- Fully responsive design for mobile and desktop
+- Roman-themed visual design with Colosseum imagery
+
+## How It Works
+1. Players click "Begin Your Quest" to start
+2. An encrypted phrase is displayed using Caesar Cipher (shift 1-25)
+3. Players must decrypt the message by figuring out the shift value
+4. Correct answers advance progress; incorrect attempts affect accuracy
+5. After solving all 10 phrases, a victory modal celebrates completion
+
+## Technology
+- Pure HTML5, CSS3, and vanilla JavaScript
+- No frameworks or build tools required
+- Google Fonts: Cinzel, Cormorant, JetBrains Mono
+- canvas-confetti library for celebrations
+
+## Educational Value
+- Teaches basic cryptography concepts
+- Introduces historical Roman culture and quotes
+- Develops problem-solving and pattern recognition skills
+- Suitable for all ages and skill levels
+
+## Creator
+Developed by Oheka
+
+## Language
+Primary language: English
+Interface language: English
+
+## Content Rating
+All ages - Educational content
