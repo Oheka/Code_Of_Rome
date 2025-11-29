@@ -1,0 +1,33 @@
+# robots.txt for Code of Rome - Caesar Cipher Challenge
+# https://www.codeofrome.com/
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.codeofrome.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block common non-essential paths (if any exist)
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
