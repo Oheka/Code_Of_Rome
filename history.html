@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>History of the Caesar Cipher — Code of Rome</title>
+    <meta name="description" content="The complete history of the Caesar Cipher: from Julius Caesar's Gallic Wars to Al-Kindi's frequency analysis and modern cryptography. Interactive cipher demo included.">
+    <meta name="keywords" content="caesar cipher history, julius caesar encryption, frequency analysis, al-kindi, roman cryptography, vigenere cipher, enigma machine, ROT13, cryptography timeline">
+    <meta name="author" content="Oheka">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://codeofrome.com/history.html">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://codeofrome.com/history.html">
+    <link rel="alternate" hreflang="fr" href="https://codeofrome.com/history.html">
+    <link rel="alternate" hreflang="x-default" href="https://codeofrome.com/history.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://codeofrome.com/history.html">
+    <meta property="og:title" content="History of the Caesar Cipher — Code of Rome">
+    <meta property="og:description" content="From the battlefields of Gaul to modern cryptography — the complete story of the world's most famous cipher, with an interactive demo.">
+    <meta property="og:image" content="https://codeofrome.com/Code_Of_Rome.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:site_name" content="Code of Rome">
+    <meta property="article:author" content="Oheka">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="History of the Caesar Cipher">
+    <meta name="twitter:description" content="The complete history of Julius Caesar's encryption system — from 58 BC to modern cryptography, with an interactive cipher demo.">
+    <meta name="twitter:image" content="https://codeofrome.com/Code_Of_Rome.png">
+
+    <!-- Structured Data — Article -->
+    <!-- ═══ Schema.org — Article ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "History of the Caesar Cipher",
+      "alternativeHeadline": "Histoire du Chiffre de César",
+      "description": "The complete history of the Caesar Cipher: from Julius Caesar's Gallic Wars (58 BC) to Al-Kindi's frequency analysis (850 AD), the Enigma machine, and modern cryptography. Includes an interactive cipher demo.",
+      "url": "https://codeofrome.com/history.html",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-01-01",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://codeofrome.com/Code_Of_Rome.png",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Oheka"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Code of Rome",
+        "url": "https://codeofrome.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://codeofrome.com/Code_Of_Rome.png"
+        }
+      },
+      "inLanguage": ["en", "fr"],
+      "keywords": "caesar cipher history, julius caesar, frequency analysis, al-kindi, roman cryptography, vigenere cipher, enigma machine, ROT13, cryptography timeline, substitution cipher",
+      "articleSection": ["History", "Cryptography", "Ancient Rome"],
+      "about": [
+        { "@type": "Thing", "name": "Caesar cipher", "sameAs": "https://en.wikipedia.org/wiki/Caesar_cipher" },
+        { "@type": "Person", "name": "Julius Caesar", "sameAs": "https://en.wikipedia.org/wiki/Julius_Caesar" },
+        { "@type": "Thing", "name": "Cryptography", "sameAs": "https://en.wikipedia.org/wiki/Cryptography" },
+        { "@type": "Person", "name": "Al-Kindi", "sameAs": "https://en.wikipedia.org/wiki/Al-Kindi" },
+        { "@type": "Thing", "name": "Frequency analysis", "sameAs": "https://en.wikipedia.org/wiki/Frequency_analysis" },
+        { "@type": "Thing", "name": "ROT13", "sameAs": "https://en.wikipedia.org/wiki/ROT13" },
+        { "@type": "Thing", "name": "Enigma machine", "sameAs": "https://en.wikipedia.org/wiki/Enigma_machine" },
+        { "@type": "Thing", "name": "Vigenère cipher", "sameAs": "https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher" }
+      ],
+      "mentions": [
+        { "@type": "Person", "name": "Suetonius", "sameAs": "https://en.wikipedia.org/wiki/Suetonius" },
+        { "@type": "Person", "name": "Leon Battista Alberti", "sameAs": "https://en.wikipedia.org/wiki/Leon_Battista_Alberti" },
+        { "@type": "Person", "name": "Blaise de Vigenère", "sameAs": "https://en.wikipedia.org/wiki/Blaise_de_Vigen%C3%A8re" },
+        { "@type": "Person", "name": "Whitfield Diffie", "sameAs": "https://en.wikipedia.org/wiki/Whitfield_Diffie" }
+      ],
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Code of Rome",
+        "url": "https://codeofrome.com"
+      }
+    }
+    </script>
+
+    <!-- ═══ Schema.org — FAQPage ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who invented the Caesar cipher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Caesar cipher is named after Julius Caesar (100–44 BC), who used it to protect his military dispatches during the Gallic Wars (58–50 BC), typically with a shift of three positions. The historian Suetonius first documented this in his work De Vita Caesarum (c. 121 AD)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Caesar cipher work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each letter is replaced by the letter a fixed number of positions further along the alphabet, called the shift or key. The encryption formula is E(x) = (x + n) mod 26, where x is the letter's position (A=0, Z=25) and n is the shift. Decryption applies the inverse: D(x) = (x − n) mod 26. With a shift of 3, A becomes D, B becomes E, and so on. There are 25 possible non-trivial shifts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you break or decrypt the Caesar cipher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are two main methods. First, brute force: test all 25 possible shifts until the plaintext is recognisable — a computer can do this in microseconds. Second, frequency analysis: pioneered by the Arab scholar Al-Kindi around 850 AD, it exploits the fact that letters appear at predictable frequencies in every language. In English, E is the most common letter (~12.7%), so the most frequent ciphertext letter likely corresponds to E, immediately revealing the shift."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ROT13?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROT13 is a Caesar cipher with a shift of exactly 13. Because 13 + 13 = 26 (the length of the alphabet), the same operation encrypts and decrypts. It became popular on early internet forums in the 1980s–90s to hide spoilers, jokes, and puzzle answers, and is still used today for trivial obfuscation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Caesar cipher secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. With only 25 possible shifts, the Caesar cipher offers essentially no security by modern standards. A computer breaks it in microseconds via brute force, and even a human can use frequency analysis to crack it in minutes. It is used today exclusively for educational purposes, puzzle games, and as an introduction to cryptography concepts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What came after the Caesar cipher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main successor was the Vigenère cipher (1553), which uses a keyword to apply different Caesar shifts to each letter — considered unbreakable for three centuries. Later, Leon Battista Alberti invented the cipher disk (1467), which mechanised polyalphabetic substitution. The 20th century brought electromechanical machines like the Enigma (1920s), and ultimately public-key cryptography (Diffie–Hellman, 1976) and modern standards like AES and RSA."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══ Schema.org — BreadcrumbList ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Code of Rome",
+          "item": "https://codeofrome.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "History of the Caesar Cipher",
+          "item": "https://codeofrome.com/history.html"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>window._historyPage = true;</script>
+</head>
+<body class="history-page">
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">Code of Rome</a>
+    <ul class="nav-links">
+        <li><a href="index.html" data-i18n="game">Game</a></li>
+        <li><a href="history.html" class="active" data-i18n="history">History</a></li>
+    </ul>
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="history-hero">
+    <div class="history-hero-content">
+        <h1 class="history-title" data-i18n="hist.title">The Caesar Cipher</h1>
+        <div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin:1.5rem 0;">
+            <div style="height:1px;width:4rem;background:linear-gradient(to right,transparent,var(--gold));opacity:0.6;"></div>
+            <span class="hist-tag" data-i18n="hist.tag">HISTORIA CRYPTOGRAPHIAE</span>
+            <div style="height:1px;width:4rem;background:linear-gradient(to left,transparent,var(--gold));opacity:0.6;"></div>
+        </div>
+        <p class="history-lead" data-i18n="hist.lead">From the battlefields of Gaul to the halls of modern cryptography — the story of the world's most famous cipher.</p>
+    </div>
+</section>
+
+<!-- ══ CONTENT ══ -->
+<section class="history-section">
+<div class="container">
+<div class="history-prose">
+
+    <!-- §1 -->
+    <div class="prose-section">
+        <h2><span class="num">I</span> <span data-i18n="s1.title">Julius Caesar — The Man Behind the Code</span></h2>
+        <p data-i18n="s1.p1"><strong>Gaius Julius Caesar</strong> (100 – 44 BC) was a Roman general, statesman, and one of the most pivotal figures in Western history...</p>
+        <p data-i18n="s1.p2">Caesar maintained a vast network of communications spanning thousands of kilometres...</p>
+        <p data-i18n="s1.p3">Caesar's cipher, described by the Roman historian <strong>Suetonius</strong>...</p>
+        <blockquote class="history-quote">
+            <p data-i18n="s1.quote">If he had anything confidential to say, he wrote it in cipher...</p>
+            <cite data-i18n="s1.cite">— Suetonius, <em>De Vita Caesarum</em>, c. 121 AD</cite>
+        </blockquote>
+    </div>
+
+    <!-- §2 -->
+    <div class="prose-section">
+        <h2><span class="num">II</span> <span data-i18n="s2.title">How the Caesar Cipher Works</span></h2>
+        <p data-i18n="s2.p1">The Caesar cipher is a <strong>substitution cipher</strong>...</p>
+        <p data-i18n="s2.p2">The transformation is mathematically expressed as: <strong>E(x) = (x + n) mod 26</strong>...</p>
+        <p data-i18n="s2.p3">For example, with a shift of 3 — Caesar's preferred key — the alphabet maps like this:</p>
+
+        <div class="cipher-demo">
+            <h3 data-i18n="s2.demo.title">✦ Interactive Cipher Demo ✦</h3>
+            <div class="demo-controls">
+                <div class="demo-field">
+                    <label data-i18n="s2.demo.label.text">Your message (plaintext)</label>
+                    <input type="text" class="demo-input" id="demoInput" value="VENI VIDI VICI" oninput="updateDemo()">
+                </div>
+                <div class="shift-field">
+                    <label data-i18n="s2.demo.label.shift">Shift (key)</label>
+                    <div class="shift-control">
+                        <button class="shift-btn" onclick="adjustShift(-1)">−</button>
+                        <span class="shift-display" id="shiftDisplay">3</span>
+                        <button class="shift-btn" onclick="adjustShift(1)">+</button>
+                    </div>
+                </div>
+            </div>
+            <p class="demo-output-label" data-i18n="s2.demo.label.output">Encrypted result (ciphertext)</p>
+            <div class="demo-output" id="demoOutput">YHQL YLGL YLFL</div>
+            <div class="alphabet-table" style="margin-top:2rem;">
+                <p class="alpha-header" data-i18n="s2.plain.label">Plain →</p>
+                <div class="alpha-row" id="alphaPlain"></div>
+                <p class="alpha-header" style="margin-top:0.5rem;" data-i18n="s2.cipher.label">Cipher →</p>
+                <div class="alpha-row" id="alphaEnc"></div>
+            </div>
+        </div>
+
+        <p data-i18n="s2.p4">The cipher works on letters only; spaces, punctuation, and numbers are left unchanged.</p>
+        <p data-i18n="s2.p5">Caesar sometimes varied his approach. According to <strong>Valerius Probus</strong>...</p>
+    </div>
+
+    <!-- §3 -->
+    <div class="prose-section">
+        <h2><span class="num">III</span> <span data-i18n="s3.title">Historical Uses &amp; Military Intelligence</span></h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon">🗡</div>
+                <h3 data-i18n="card.gallic.title">The Gallic Wars (58–50 BC)</h3>
+                <p data-i18n="card.gallic.p">Caesar's primary use of the cipher was during his eight-year campaign in Gaul...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">📜</div>
+                <h3 data-i18n="card.political.title">Political Correspondence</h3>
+                <p data-i18n="card.political.p">Caesar used encryption in his personal letters to Cicero...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">👑</div>
+                <h3 data-i18n="card.augustus.title">Augustus Caesar's Variant</h3>
+                <p data-i18n="card.augustus.p">Caesar's successor Augustus used a similar system...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🔄</div>
+                <h3 data-i18n="card.rot13.title">ROT13 — A Modern Echo</h3>
+                <p data-i18n="card.rot13.p">ROT13 ("rotate by 13") is a direct descendant of the Caesar cipher...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- §4 -->
+    <div class="prose-section">
+        <h2><span class="num">IV</span> <span data-i18n="s4.title">Breaking the Code — Frequency Analysis</span></h2>
+        <p data-i18n="s4.p1">For centuries, the Caesar cipher was considered reasonably secure...</p>
+        <p data-i18n="s4.p2">The more sophisticated technique is <strong>frequency analysis</strong>...</p>
+        <blockquote class="history-quote">
+            <p data-i18n="s4.quote">One way to solve an encrypted message, if we know its language...</p>
+            <cite data-i18n="s4.cite">— Al-Kindi, <em>A Manuscript on Deciphering Cryptographic Messages</em>, c. 850 AD</cite>
+        </blockquote>
+        <p data-i18n="s4.p3">This discovery effectively rendered all simple substitution ciphers obsolete...</p>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon">📜</div>
+                <h3 data-i18n="card.freq.title">Letter Frequency in English</h3>
+                <p data-i18n="card.freq.p">The most common letters are: <strong>E (12.7%), T (9.1%), A (8.2%)...</strong></p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🔍</div>
+                <h3 data-i18n="card.alkindi.title">Al-Kindi's Method</h3>
+                <p data-i18n="card.alkindi.p">Count how often each letter appears in the ciphertext...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">⏳</div>
+                <h3 data-i18n="card.brute.title">Brute Force Attack</h3>
+                <p data-i18n="card.brute.p">Because there are only 25 possible shifts, a computer can test all of them in microseconds...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- §5 Timeline -->
+    <div class="prose-section">
+        <h2><span class="num">V</span> <span data-i18n="s5.title">A Timeline of Cryptography</span></h2>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 data-i18n="t1.title">Scytale of Sparta</h3>
+                    <p data-i18n="t1.p">The Spartans use a cylindrical rod (scytale) around which a strip of leather is wound...</p>
+                </div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">700 BC</span></div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">58 BC</span></div>
+                <div class="timeline-content">
+                    <h3 data-i18n="t2.title">Caesar's Gallic Campaigns</h3>
+                    <p data-i18n="t2.p">Julius Caesar begins systematically encrypting his military communications...</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 data-i18n="t3.title">Augustus's One-Shift Variant</h3>
+                    <p data-i18n="t3.p">Suetonius records that the Emperor Augustus used a personal cipher...</p>
+                </div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">27 BC</span></div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">850 AD</span></div>
+                <div class="timeline-content">
+                    <h3 data-i18n="t4.title">Al-Kindi Breaks the Cipher</h3>
+                    <p data-i18n="t4.p">The Arab scholar Al-Kindi publishes the first known systematic description of frequency analysis...</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 data-i18n="t5.title">Leon Battista Alberti — Polyalphabetic Cipher</h3>
+                    <p data-i18n="t5.p">The Italian Renaissance polymath invents the cipher disk and introduces polyalphabetic substitution...</p>
+                </div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">1467</span></div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">1553</span></div>
+                <div class="timeline-content">
+                    <h3 data-i18n="t6.title">The Vigenère Cipher</h3>
+                    <p data-i18n="t6.p">Giovan Battista Bellaso creates a polyalphabetic cipher using a keyword...</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 data-i18n="t7.title">The Enigma Machine</h3>
+                    <p data-i18n="t7.p">Germany deploys the Enigma cipher machine, which automates polyalphabetic substitution...</p>
+                </div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">1920s</span></div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-spacer"></div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">1976</span></div>
+                <div class="timeline-content">
+                    <h3 data-i18n="t8.title">Public-Key Cryptography</h3>
+                    <p data-i18n="t8.p">Diffie and Hellman publish the landmark paper introducing public-key cryptography...</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 data-i18n="t9.title">ROT13 on the Internet</h3>
+                    <p data-i18n="t9.p">ROT13 — a Caesar cipher with a shift of 13 — becomes a standard convention on Usenet...</p>
+                </div>
+                <div class="timeline-node"><div class="timeline-gem"></div><span class="timeline-date">1980s</span></div>
+                <div class="timeline-spacer"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- §6 -->
+    <div class="prose-section">
+        <h2><span class="num">VI</span> <span data-i18n="s6.title">Legacy — Why It Still Matters</span></h2>
+        <p data-i18n="s6.p1">Today, the Caesar cipher is hopelessly insecure for any real communication...</p>
+        <p data-i18n="s6.p2">It is the first cipher taught in virtually every computer science curriculum worldwide...</p>
+        <p data-i18n="s6.p3">The cipher also demonstrates a timeless truth: <strong>obscurity alone is not security</strong>...</p>
+        <p data-i18n="s6.p4">More broadly, Caesar's instinct was correct: in warfare and diplomacy, controlling information is as important as controlling territory...</p>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon">🎓</div>
+                <h3 data-i18n="card.edu.title">Education</h3>
+                <p data-i18n="card.edu.p">The Caesar cipher is the entry point to cryptography in schools and universities worldwide...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🧩</div>
+                <h3 data-i18n="card.puzzle.title">Puzzles &amp; Games</h3>
+                <p data-i18n="card.puzzle.p">From escape rooms to geocaching, the Caesar cipher remains a beloved puzzle mechanic...</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">💻</div>
+                <h3 data-i18n="card.prog.title">Programming</h3>
+                <p data-i18n="card.prog.p">Implementing a Caesar cipher is a classic beginner programming exercise...</p>
+            </div>
+        </div>
+        <blockquote class="history-quote">
+            <p data-i18n="s6.quote">The study of cryptography must begin somewhere. And it almost always begins in Rome...</p>
+            <cite data-i18n="s6.cite">— Code of Rome</cite>
+        </blockquote>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:3rem 0 1rem;">
+        <div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:2.5rem;">
+            <div style="height:1px;flex:1;background:linear-gradient(to right,transparent,var(--gold));opacity:0.4;"></div>
+            <span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.4em;color:var(--gold);opacity:0.75;" data-i18n="cta.label">NUNC LUDUM INCIPE</span>
+            <div style="height:1px;flex:1;background:linear-gradient(to left,transparent,var(--gold));opacity:0.4;"></div>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--text-muted);margin-bottom:2rem;font-weight:300;" data-i18n="cta.text">Now that you know the history — can you crack the cipher?</p>
+        <a href="index.html" style="font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.14em;padding:1.1rem 2.6rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold) 48%,var(--gold-light));color:var(--bg-900);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.8rem;font-weight:600;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);text-decoration:none;box-shadow:0 4px 28px var(--gold-glow);transition:all 0.35s ease;" data-i18n="cta.btn">🏛 Play Code of Rome</a>
+    </div>
+
+</div>
+</div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-quote" data-i18n="footer.quote.hist">"In the beginning was the Word — and Caesar encrypted it."</p>
+        <div class="footer-divider"></div>
+        <p class="footer-credits"><span data-i18n="footer.by">Developed by</span> <strong>Oheka</strong></p>
+        <p class="footer-motto">Fortuna audaces iuvat</p>
+    </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+let demoShift = 3;
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function caesarCipher(text, shift) {
+    return text.split('').map(c => {
+        if (/[a-zA-Z]/.test(c)) {
+            const u = c.toUpperCase();
+            const enc = alphabet[(alphabet.indexOf(u) + shift) % 26];
+            return c === c.toLowerCase() ? enc.toLowerCase() : enc;
+        }
+        return c;
+    }).join('');
+}
+
+function updateDemo() {
+    const input = document.getElementById('demoInput').value || '';
+    document.getElementById('demoOutput').textContent = caesarCipher(input, demoShift) || '·';
+    updateAlphabetTable();
+}
+
+function adjustShift(delta) {
+    demoShift = ((demoShift + delta - 1 + 25) % 25) + 1;
+    document.getElementById('shiftDisplay').textContent = demoShift;
+    updateDemo();
+}
+
+function updateAlphabetTable() {
+    const plain = document.getElementById('alphaPlain');
+    const enc   = document.getElementById('alphaEnc');
+    if (!plain || !enc) return;
+    plain.innerHTML = enc.innerHTML = '';
+    for (let i = 0; i < 26; i++) {
+        const p = document.createElement('div');
+        p.className = 'alpha-cell orig';
+        p.textContent = alphabet[i];
+        plain.appendChild(p);
+        const e = document.createElement('div');
+        e.className = 'alpha-cell enc';
+        e.textContent = alphabet[(i + demoShift) % 26];
+        enc.appendChild(e);
+    }
+}
+
+// Animate on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.style.animationPlayState = 'running';
+            observer.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.prose-section, .timeline-item').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateAlphabetTable();
+    updateDemo();
+});
+</script>
+</body>
+</html>
