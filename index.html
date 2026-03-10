@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Code of Rome — Caesar Cipher Decryption Game</title>
+    <meta name="description" content="Decrypt ancient Roman messages using the legendary Caesar Cipher. A free browser game that tests your cryptography skills across 10 historical phrases from Julius Caesar.">
+    <meta name="keywords" content="caesar cipher, cryptography game, decode cipher, roman history, julius caesar, encryption puzzle, cipher challenge, cryptogram">
+    <meta name="author" content="Oheka">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://codeofrome.com/index.html">
+
+    <!-- Hreflang for bilingual support -->
+    <link rel="alternate" hreflang="en" href="https://codeofrome.com/index.html">
+    <link rel="alternate" hreflang="fr" href="https://codeofrome.com/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://codeofrome.com/index.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codeofrome.com/index.html">
+    <meta property="og:title" content="Code of Rome — Caesar Cipher Decryption Game">
+    <meta property="og:description" content="Decrypt 10 ancient Roman phrases encrypted with the Caesar Cipher. Test your cryptography skills in this immersive historical browser game.">
+    <meta property="og:image" content="https://codeofrome.com/Code_Of_Rome.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:site_name" content="Code of Rome">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Code of Rome — Caesar Cipher Game">
+    <meta name="twitter:description" content="Decrypt ancient Roman messages with the Caesar Cipher. A free, immersive cryptography game in your browser.">
+    <meta name="twitter:image" content="https://codeofrome.com/Code_Of_Rome.png">
+
+    <!-- Structured Data — WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Code of Rome",
+      "description": "A Caesar Cipher decryption game set in ancient Rome. Decrypt 10 historical phrases and prove your cryptography skills.",
+      "url": "https://codeofrome.com",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Oheka" },
+      "inLanguage": ["en", "fr"],
+      "genre": "Puzzle",
+      "keywords": "caesar cipher, cryptography, roman history, puzzle game"
+    }
+    </script>
+
+    <!-- Structured Data — BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Code of Rome", "item": "https://codeofrome.com" },
+        { "@type": "ListItem", "position": 2, "name": "Game", "item": "https://codeofrome.com/index.html" }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">Code of Rome</a>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active" data-i18n="game">Game</a></li>
+        <li><a href="history.html" target="_blank" rel="noopener" data-i18n="history">History</a></li>
+    </ul>
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-embers" id="embers" aria-hidden="true"></div>
+
+    <div class="hero-overlay">
+        <p class="hero-eyebrow" data-i18n="hero.eyebrow">SPQR · Senatus Populusque Romanus</p>
+        <h1 class="hero-title">Code of Rome</h1>
+        <div class="hero-ornament-row" aria-hidden="true">
+            <div class="hero-orn-line"></div>
+            <div class="hero-orn-gem"></div>
+            <span class="hero-orn-text">⚔ · ⚔</span>
+            <div class="hero-orn-gem"></div>
+            <div class="hero-orn-line"></div>
+        </div>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Enter the mind of Rome. Decrypt its secrets.</p>
+        <p class="hero-description" data-i18n="hero.description">Test your wit against the legendary Caesar Cipher. Decipher ancient Roman wisdom and prove yourself worthy of the Empire's most guarded secrets.</p>
+        <div class="hero-buttons">
+            <button class="hero-btn hero-btn-primary" onclick="scrollToGame()">
+                <span>🏛</span> <span data-i18n="hero.btn.play">Begin Your Quest</span>
+            </button>
+            <a href="history.html" target="_blank" rel="noopener" class="hero-btn hero-btn-secondary">
+                <span>📜</span> <span data-i18n="hero.btn.history">Discover the History</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span class="scroll-label" data-i18n="scroll.label">Descende</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </div>
+</section>
+
+<!-- ══ GAME SECTION ══ -->
+<section id="game-section" class="game-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-i18n="section.tag">⚔ Decipherment Chamber ⚔</span>
+            <h2 class="section-title" data-i18n="section.title">Solve the Cipher</h2>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span class="progress-title" data-i18n="progress.title">Scroll Progress</span>
+                <span class="progress-badge" id="progressBadge">0 / 10</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-markers">
+                <div class="marker" data-numeral="I"></div>
+                <div class="marker" data-numeral="II"></div>
+                <div class="marker" data-numeral="III"></div>
+                <div class="marker" data-numeral="IV"></div>
+                <div class="marker" data-numeral="V"></div>
+                <div class="marker" data-numeral="VI"></div>
+                <div class="marker" data-numeral="VII"></div>
+                <div class="marker" data-numeral="VIII"></div>
+                <div class="marker" data-numeral="IX"></div>
+                <div class="marker" data-numeral="X"></div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-accent"></div>
+            <div class="corner-ornament tl" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="M2 2 L2 32 M2 2 L32 2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9 L9 24 M9 9 L24 9" stroke="currentColor" stroke-width="0.8" opacity="0.45"/><circle cx="2" cy="2" r="3" fill="currentColor"/></svg></div>
+            <div class="corner-ornament tr" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="M2 2 L2 32 M2 2 L32 2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9 L9 24 M9 9 L24 9" stroke="currentColor" stroke-width="0.8" opacity="0.45"/><circle cx="2" cy="2" r="3" fill="currentColor"/></svg></div>
+            <div class="corner-ornament bl" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="M2 2 L2 32 M2 2 L32 2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9 L9 24 M9 9 L24 9" stroke="currentColor" stroke-width="0.8" opacity="0.45"/><circle cx="2" cy="2" r="3" fill="currentColor"/></svg></div>
+            <div class="corner-ornament br" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="M2 2 L2 32 M2 2 L32 2" stroke="currentColor" stroke-width="1.5"/><path d="M9 9 L9 24 M9 9 L24 9" stroke="currentColor" stroke-width="0.8" opacity="0.45"/><circle cx="2" cy="2" r="3" fill="currentColor"/></svg></div>
+
+            <div class="cipher-display">
+                <label class="cipher-label" data-i18n="cipher.label">⚙ Encrypted Transmission</label>
+                <div class="cipher-box" id="cipherBox">
+                    <div class="cipher-box-glow"></div>
+                    <p class="cipher-text placeholder" id="cipherText">· · · · · · ·</p>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <label class="input-label" data-i18n="input.label">✦ Your Decryption</label>
+                <textarea id="inputText" class="input-textarea" data-i18n-placeholder="input.placeholder" placeholder="Enter your decrypted message here..." disabled></textarea>
+                <div class="input-meta">
+                    <span class="input-hint" data-i18n="input.hint">Hint: Caesar shifts by 1–25 positions.</span>
+                    <button class="hint-btn" id="hintBtn" onclick="revealHint()" data-i18n="hint.btn">⚡ Reveal Shift</button>
+                </div>
+                <div class="hint-reveal" id="hintReveal"></div>
+            </div>
+
+            <div class="button-group">
+                <button id="startButton" class="btn btn-primary" onclick="startGame()">
+                    <span class="btn-icon">✨</span> <span id="startLabel" data-i18n="btn.start">Start Game</span>
+                </button>
+                <button id="checkButton" class="btn btn-primary" onclick="checkAnswer()" disabled style="display:none;">
+                    <span class="btn-icon">🛡</span> <span data-i18n="btn.check">Check Answer</span>
+                </button>
+            </div>
+            <div id="feedbackMessage" class="feedback-message"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🏺</div>
+                <div class="stat-content">
+                    <p class="stat-label" data-i18n="stat.solved">Phrases Solved</p>
+                    <p class="stat-value" id="statSolved">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-content">
+                    <p class="stat-label" data-i18n="stat.time">Last Time</p>
+                    <p class="stat-value" id="statTime">--</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📜</div>
+                <div class="stat-content">
+                    <p class="stat-label" data-i18n="stat.accuracy">Accuracy</p>
+                    <p class="stat-value" id="statAccuracy">100%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-quote" data-i18n="footer.quote">"Can you decrypt like a Roman scholar?"</p>
+        <div class="footer-divider"></div>
+        <p class="footer-credits"><span data-i18n="footer.by">Developed by</span> <strong>Oheka</strong></p>
+        <p class="footer-motto">Fortuna audaces iuvat</p>
+    </div>
+</footer>
+
+<div id="victoryModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="victoryTitle">
+    <div class="modal-overlay" onclick="closeVictoryModal()"></div>
+    <div class="modal-content">
+        <span class="modal-laurel" aria-hidden="true">👑</span>
+        <h2 class="modal-title" id="victoryTitle">Veni, Vidi, Vici!</h2>
+        <p class="modal-subtitle" data-i18n="modal.subtitle">You have conquered all 10 challenges!</p>
+        <div class="modal-divider"></div>
+        <div class="modal-stats">
+            <div class="modal-stat">
+                <p class="modal-stat-label" data-i18n="modal.solved">Total Solved</p>
+                <p class="modal-stat-value" id="modalSolved">10</p>
+            </div>
+            <div class="modal-stat">
+                <p class="modal-stat-label" data-i18n="modal.accuracy">Accuracy</p>
+                <p class="modal-stat-value" id="modalAccuracy">100%</p>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="playAgain()" style="width:100%;justify-content:center;">
+            <span class="btn-icon">🔄</span> <span data-i18n="btn.playagain">Play Again</span>
+        </button>
+    </div>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="i18n.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
