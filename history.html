@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of the Caesar Cipher — Code of Rome</title>
+    <meta name="description" content="Discover the complete history of the Caesar Cipher — from Julius Caesar's military campaigns to modern cryptography.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">Code of Rome</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Game</a></li>
+        <li><a href="history.html" class="active">History</a></li>
+    </ul>
+</nav>
+
+<!-- ══ HISTORY HERO ══ -->
+<section class="history-hero">
+    <div class="history-hero-content">
+        <h1 class="history-title">The Caesar Cipher</h1>
+        <div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin:1.5rem 0;">
+            <div style="height:1px;width:4rem;background:linear-gradient(to right,transparent,var(--gold));opacity:0.6;"></div>
+            <span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.4em;color:var(--gold);opacity:0.8;">HISTORIA CRYPTOGRAPHIAE</span>
+            <div style="height:1px;width:4rem;background:linear-gradient(to left,transparent,var(--gold));opacity:0.6;"></div>
+        </div>
+        <p class="history-lead">
+            From the battlefields of Gaul to the halls of modern cryptography — the story of the world's most famous cipher.
+        </p>
+    </div>
+</section>
+
+<!-- ══ CONTENT ══ -->
+<section class="history-section">
+    <div class="container">
+        <div class="history-prose">
+
+            <!-- ─ SECTION 1: Caesar ─ -->
+            <div class="prose-section">
+                <h2><span class="num">I</span> Julius Caesar — The Man Behind the Code</h2>
+                <p>
+                    <strong>Gaius Julius Caesar</strong> (100 – 44 BC) was a Roman general, statesman, and one of the most pivotal figures in Western history. Renowned for his military genius during the Gallic Wars (58–50 BC), he conquered vast territories stretching from modern-day France to Belgium, adding enormous wealth and prestige to Rome. But Caesar was not only a warrior — he was a calculating strategist who understood that information, when intercepted by the enemy, could be as deadly as any blade.
+                </p>
+                <p>
+                    Caesar maintained a vast network of communications spanning thousands of kilometres. His dispatches to Rome, his instructions to lieutenants, his personal correspondence with Cicero and other senators — all of it flowed through messengers who crossed dangerous territory. Captured couriers were a real risk. The solution? A simple but effective encryption system that only his trusted recipients could read.
+                </p>
+                <p>
+                    Caesar's cipher, described by the Roman historian <strong>Suetonius</strong> in his work <em>Life of Julius Caesar</em>, consisted of substituting each letter of the alphabet with one a fixed number of positions further along. Caesar himself reportedly favoured a shift of <strong>three positions</strong> — so 'A' became 'D', 'B' became 'E', and so on.
+                </p>
+
+                <blockquote class="history-quote">
+                    <p>If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.</p>
+                    <cite>— Suetonius, <em>De Vita Caesarum</em>, c. 121 AD</cite>
+                </blockquote>
+            </div>
+
+            <!-- ─ SECTION 2: How it works ─ -->
+            <div class="prose-section">
+                <h2><span class="num">II</span> How the Caesar Cipher Works</h2>
+                <p>
+                    The Caesar cipher is a <strong>substitution cipher</strong> — each letter in the original message (called the <em>plaintext</em>) is replaced by a letter a fixed number of positions down the alphabet. This fixed number is called the <strong>shift</strong> or <strong>key</strong>. Because the Latin alphabet used by Caesar had 23 letters, and our modern alphabet has 26, there are 25 possible non-trivial shifts.
+                </p>
+                <p>
+                    The transformation is mathematically expressed as: <strong>E(x) = (x + n) mod 26</strong>, where <em>x</em> is the position of the letter (A=0, B=1… Z=25) and <em>n</em> is the shift. To decrypt, the recipient simply applies the inverse: <strong>D(x) = (x − n) mod 26</strong>.
+                </p>
+                <p>
+                    For example, with a shift of 3 — Caesar's preferred key — the alphabet maps like this:
+                </p>
+
+                <div class="cipher-demo">
+                    <h3>✦ Interactive Cipher Demo ✦</h3>
+                    <div class="demo-controls">
+                        <div class="demo-field">
+                            <label>Your message (plaintext)</label>
+                            <input type="text" class="demo-input" id="demoInput" value="VENI VIDI VICI" oninput="updateDemo()" placeholder="Type something...">
+                        </div>
+                        <div class="shift-field">
+                            <label>Shift (key)</label>
+                            <div class="shift-control">
+                                <button class="shift-btn" onclick="adjustShift(-1)">−</button>
+                                <span class="shift-display" id="shiftDisplay">3</span>
+                                <button class="shift-btn" onclick="adjustShift(1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="demo-output-label">Encrypted result (ciphertext)</p>
+                    <div class="demo-output" id="demoOutput">YHQL YLGL YLFL</div>
+
+                    <!-- Alphabet mapping table -->
+                    <div class="alphabet-table" style="margin-top:2rem;">
+                        <p class="alpha-header">Plain →</p>
+                        <div class="alpha-row" id="alphaPlain"></div>
+                        <p class="alpha-header" style="margin-top:0.5rem;">Cipher →</p>
+                        <div class="alpha-row" id="alphaEnc"></div>
+                    </div>
+                </div>
+
+                <p>
+                    The cipher works on letters only; spaces, punctuation, and numbers are left unchanged. This makes it easy to apply by hand — something a Roman soldier or scribe could do quickly in the field using a simple substitution table.
+                </p>
+                <p>
+                    Caesar sometimes varied his approach. According to <strong>Valerius Probus</strong>, another ancient commentator, Caesar also used a Greek alphabet cipher for particularly sensitive messages, making decryption even harder for those who intercepted his letters.
+                </p>
+            </div>
+
+            <!-- ─ SECTION 3: Historical Use ─ -->
+            <div class="prose-section">
+                <h2><span class="num">III</span> Historical Uses & Military Intelligence</h2>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-icon">⚔️</div>
+                        <h3>The Gallic Wars (58–50 BC)</h3>
+                        <p>Caesar's primary use of the cipher was during his eight-year campaign in Gaul. He encrypted orders to his legions, instructions about troop movements, and reports to the Senate in Rome — all to prevent Gallic tribes from exploiting captured couriers.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🤫</div>
+                        <h3>Political Correspondence</h3>
+                        <p>Caesar used encryption in his personal letters to Cicero and other Roman politicians. In a tense political climate — with rivals like Pompey and Crassus — keeping communications private was a matter of survival as much as strategy.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">👑</div>
+                        <h3>Augustus Caesar's Variant</h3>
+                        <p>Caesar's successor Augustus used a similar system, but with a shift of only one position. Suetonius noted that Augustus simply wrote the next letter of the alphabet — a slight modification of his adoptive father's method, but equally effective for his era.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">📖</div>
+                        <h3>ROT13 — A Modern Echo</h3>
+                        <p>ROT13 ("rotate by 13") is a direct descendant of the Caesar cipher. With a shift of exactly 13, encoding and decoding use the identical operation. It was widely used on early internet forums to hide spoilers, jokes, and puzzle answers — a playful echo of Caesar's military encryption.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─ SECTION 4: Weaknesses ─ -->
+            <div class="prose-section">
+                <h2><span class="num">IV</span> Breaking the Code — Frequency Analysis</h2>
+                <p>
+                    For centuries, the Caesar cipher was considered reasonably secure. But its fundamental weakness is devastating: because there are only <strong>25 possible shifts</strong>, a cryptanalyst can simply try all of them — a method called <em>brute force attack</em>. Even without a computer, an attacker can test all 25 options in minutes.
+                </p>
+                <p>
+                    The more sophisticated technique is <strong>frequency analysis</strong>, pioneered by the Arab polymath <strong>Al-Kindi</strong> (c. 801–873 AD) in his landmark treatise <em>A Manuscript on Deciphering Cryptographic Messages</em> — one of the earliest systematic works on cryptanalysis. The insight is elegantly simple: in any language, letters appear with predictable frequencies. In English, 'E' is the most common letter (roughly 12.7%), followed by 'T', 'A', 'O', 'I', and 'N'. In a Caesar-encrypted English text, the most frequent letter in the ciphertext almost certainly corresponds to 'E' — revealing the shift instantly.
+                </p>
+
+                <blockquote class="history-quote">
+                    <p>One way to solve an encrypted message, if we know its language, is to find a different plaintext of the same language long enough to fill one sheet or so, and then we count the occurrences of each letter.</p>
+                    <cite>— Al-Kindi, <em>A Manuscript on Deciphering Cryptographic Messages</em>, c. 850 AD</cite>
+                </blockquote>
+
+                <p>
+                    This discovery effectively rendered all simple substitution ciphers obsolete once the technique became widely known. The Caesar cipher, brilliant for its age, was fundamentally broken by the 9th century — though it took centuries for the knowledge to spread widely through Europe.
+                </p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-icon">📊</div>
+                        <h3>Letter Frequency in English</h3>
+                        <p>The most common letters in English are: <strong>E (12.7%), T (9.1%), A (8.2%), O (7.5%), I (7.0%), N (6.7%)</strong>. In any sufficiently long Caesar-encrypted English text, the most frequent ciphertext letter almost always decodes to 'E'.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🔬</div>
+                        <h3>Al-Kindi's Method</h3>
+                        <p>Count how often each letter appears in the ciphertext. The most frequent letter is likely 'E'. The difference between its position and 'E' (position 4) gives you the shift. For short messages, brute-forcing all 25 shifts remains the fastest approach.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">⚡</div>
+                        <h3>Brute Force Attack</h3>
+                        <p>Because there are only 25 possible shifts, a computer can test all of them in microseconds. Even by hand, a skilled cryptanalyst can break a Caesar cipher in under a minute. This makes it completely insecure for any modern application.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─ SECTION 5: Timeline ─ -->
+            <div class="prose-section">
+                <h2><span class="num">V</span> A Timeline of Cryptography</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Scytale of Sparta</h3>
+                            <p>The Spartans use a cylindrical rod (scytale) around which a strip of leather is wound to encrypt military dispatches — one of the earliest known transposition ciphers, predating Caesar by centuries.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">700 BC</span>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">58 BC</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Caesar's Gallic Campaigns</h3>
+                            <p>Julius Caesar begins systematically encrypting his military communications using his eponymous shift cipher with a key of three, protecting orders to his legions during the conquest of Gaul.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Augustus's One-Shift Variant</h3>
+                            <p>Suetonius records that the Emperor Augustus used a personal cipher — a shift of one position — for private correspondence. He also noted variations using Greek letters for maximum security.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">27 BC</span>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">850 AD</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Al-Kindi Breaks the Cipher</h3>
+                            <p>The Arab scholar Al-Kindi publishes the first known systematic description of frequency analysis, effectively breaking all simple substitution ciphers including the Caesar cipher. His work remains a cornerstone of cryptanalysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Leon Battista Alberti — Polyalphabetic Cipher</h3>
+                            <p>The Italian Renaissance polymath invents the cipher disk and introduces the concept of polyalphabetic substitution — using multiple Caesar shifts in sequence — as a direct response to the vulnerability exposed by frequency analysis.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">1467</span>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">1553</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>The Vigenère Cipher</h3>
+                            <p>Giovan Battista Bellaso (later attributed to Blaise de Vigenère) creates a polyalphabetic cipher using a keyword to vary the shift for each letter — considered unbreakable for nearly three centuries.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>The Enigma Machine</h3>
+                            <p>Germany deploys the Enigma cipher machine, which automates polyalphabetic substitution across multiple rotors with billions of possible configurations. It is essentially a hyper-complex successor to Caesar's insight.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">1920s</span>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">1976</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Public-Key Cryptography</h3>
+                            <p>Diffie and Hellman publish the landmark paper introducing public-key cryptography, revolutionising the field. The Caesar cipher's era of symmetric, hand-applied encryption gives way to mathematical systems based on computational complexity.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>ROT13 on the Internet</h3>
+                            <p>ROT13 — a Caesar cipher with a shift of 13 — becomes a standard convention on Usenet and early internet forums to obscure spoilers, punchlines, and puzzle solutions. Caesar's 2,000-year-old idea lives on in the digital age.</p>
+                        </div>
+                        <div class="timeline-node">
+                            <div class="timeline-gem"></div>
+                            <span class="timeline-date">1980s</span>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─ SECTION 6: Legacy ─ -->
+            <div class="prose-section">
+                <h2><span class="num">VI</span> Legacy — Why It Still Matters</h2>
+                <p>
+                    Today, the Caesar cipher is hopelessly insecure for any real communication. Modern encryption standards like <strong>AES-256</strong> or <strong>RSA-2048</strong> are incomprehensibly more complex — requiring billions of years to brute-force with all computing power on Earth. And yet, the Caesar cipher remains indispensable.
+                </p>
+                <p>
+                    It is the first cipher taught in virtually every computer science and mathematics curriculum worldwide. Its simplicity makes it the perfect introduction to the core concepts of cryptography: <strong>keys, encryption, decryption, plaintext, ciphertext, and cryptanalysis</strong>. Every modern cryptographer learned these concepts, at least in part, through the Caesar cipher.
+                </p>
+                <p>
+                    The cipher also demonstrates a timeless truth about security: <strong>obscurity alone is not security</strong>. Caesar's system worked because the enemy did not know about it — not because it was inherently hard to break. This lesson drives modern cryptography, which assumes that an attacker knows everything about the algorithm and focuses all security on the key itself.
+                </p>
+                <p>
+                    More broadly, Caesar's instinct was correct: in warfare and diplomacy, controlling information is as important as controlling territory. That insight — that secrets have strategic value and must be protected — is as relevant in the age of quantum computing as it was in the age of Roman legions.
+                </p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>The Caesar cipher is the entry point to cryptography in schools and universities worldwide, introducing fundamental concepts like keys, substitution, and cryptanalysis in an approachable, hands-on format.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">🧩</div>
+                        <h3>Puzzles & Games</h3>
+                        <p>From escape rooms to crossword puzzle hints, from geocaching to ARGs (Alternate Reality Games), the Caesar cipher remains a beloved puzzle mechanic — a nod to history wrapped in playful mystery.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">💻</div>
+                        <h3>Programming</h3>
+                        <p>Implementing a Caesar cipher is a classic beginner programming exercise. It teaches string manipulation, modular arithmetic, and the concept of functions — making it a rite of passage for new developers.</p>
+                    </div>
+                </div>
+
+                <blockquote class="history-quote">
+                    <p>The study of cryptography must begin somewhere. And it almost always begins in Rome, with a general who thought to shift his letters — and changed the history of secrets forever.</p>
+                    <cite>— Code of Rome</cite>
+                </blockquote>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align:center; padding: 3rem 0 1rem;">
+                <div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:2.5rem;">
+                    <div style="height:1px;flex:1;background:linear-gradient(to right,transparent,var(--gold));opacity:0.4;"></div>
+                    <span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.4em;color:var(--gold);opacity:0.75;">NUNC LUDUM INCIPE</span>
+                    <div style="height:1px;flex:1;background:linear-gradient(to left,transparent,var(--gold));opacity:0.4;"></div>
+                </div>
+                <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--text-muted);margin-bottom:2rem;font-weight:300;">
+                    Now that you know the history — can you crack the cipher?
+                </p>
+                <a href="index.html" style="font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.14em;padding:1.1rem 2.6rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold) 48%,var(--gold-light));color:var(--bg-900);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.8rem;font-weight:600;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);text-decoration:none;box-shadow:0 4px 28px var(--gold-glow);transition:all 0.35s ease;">
+                    🏛 Play Code of Rome
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-quote">"In the beginning was the Word — and Caesar encrypted it."</p>
+        <div class="footer-divider"></div>
+        <p class="footer-credits">Developed by <strong>Oheka</strong></p>
+        <p class="footer-motto">Fortuna audaces iuvat</p>
+    </div>
+</footer>
+
+<script>
+let demoShift = 3;
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function caesarCipher(text, shift) {
+    return text.split('').map(c => {
+        if (/[a-zA-Z]/.test(c)) {
+            const upper = c.toUpperCase();
+            const idx = alphabet.indexOf(upper);
+            const enc = alphabet[(idx + shift) % 26];
+            return c === c.toLowerCase() ? enc.toLowerCase() : enc;
+        }
+        return c;
+    }).join('');
+}
+
+function updateDemo() {
+    const input = document.getElementById('demoInput').value || '';
+    document.getElementById('demoOutput').textContent = caesarCipher(input, demoShift) || '·';
+    updateAlphabetTable();
+}
+
+function adjustShift(delta) {
+    demoShift = ((demoShift + delta - 1 + 25) % 25) + 1;
+    document.getElementById('shiftDisplay').textContent = demoShift;
+    updateDemo();
+}
+
+function updateAlphabetTable() {
+    const plain = document.getElementById('alphaPlain');
+    const enc   = document.getElementById('alphaEnc');
+    if (!plain || !enc) return;
+    plain.innerHTML = '';
+    enc.innerHTML   = '';
+    for (let i = 0; i < 26; i++) {
+        const pCell = document.createElement('div');
+        pCell.className = 'alpha-cell orig';
+        pCell.textContent = alphabet[i];
+        plain.appendChild(pCell);
+        const eCell = document.createElement('div');
+        eCell.className = 'alpha-cell enc';
+        eCell.textContent = alphabet[(i + demoShift) % 26];
+        enc.appendChild(eCell);
+    }
+}
+
+// Animate prose sections on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.style.animationPlayState = 'running';
+            observer.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.prose-section, .timeline-item').forEach((el, i) => {
+    el.style.animationDelay = '0s';
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateAlphabetTable();
+    updateDemo();
+});
+</script>
+</body>
+</html>
