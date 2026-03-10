@@ -1,0 +1,41 @@
+# ============================================================
+#  robots.txt — Code of Rome (https://codeofrome.com)
+#  Updated: 2025
+# ============================================================
+
+# Allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Block access to raw assets that add no SEO value
+Disallow: /i18n.js
+Disallow: /scripts.js
+
+# AI training crawlers — opt out
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Crawl-delay for polite bots
+User-agent: *
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://codeofrome.com/sitemap.xml

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══════════════════════════════════════
+       Home / Game page
+  ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://codeofrome.com/index.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Hreflang alternates -->
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://codeofrome.com/index.html"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://codeofrome.com/index.html"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://codeofrome.com/index.html"/>
+
+    <!-- Hero image -->
+    <image:image>
+      <image:loc>https://codeofrome.com/Code_Of_Rome.png</image:loc>
+      <image:title>Code of Rome — Caesar Cipher Game</image:title>
+      <image:caption>Immersive browser game to decrypt ancient Roman messages using the Caesar Cipher</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       History page
+  ═══════════════════════════════════════ -->
+  <url>
+    <loc>https://codeofrome.com/history.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://codeofrome.com/history.html"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://codeofrome.com/history.html"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://codeofrome.com/history.html"/>
+
+    <image:image>
+      <image:loc>https://codeofrome.com/Code_Of_Rome.png</image:loc>
+      <image:title>History of the Caesar Cipher</image:title>
+      <image:caption>Complete history of Julius Caesar's encryption system, from 58 BC to modern cryptography</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

@@ -1,0 +1,61 @@
+# Code of Rome — LLM Site Manifest
+# https://codeofrome.com/llms.txt
+# Format: llms.txt (https://llmstxt.org)
+# Last updated: 2025
+
+## Project
+
+> **Code of Rome** is a free, bilingual (English / French) browser-based puzzle game
+> where players decrypt 10 ancient Roman phrases encoded with the Caesar Cipher.
+> The site also includes a complete educational history of the cipher with an interactive demo.
+
+---
+
+## Pages
+
+### [Game](https://codeofrome.com/index.html)
+The main game page. Players are presented with a randomly encrypted Roman phrase (Caesar shift 1–25) and must type the correct plaintext. Features: 10 phrases, accuracy tracking, solve timer, hint system, victory modal with Latin quotes.
+
+**Important gameplay rule:** Players must reproduce the exact plaintext including correct punctuation, spaces, and capitalisation.
+
+### [History of the Caesar Cipher](https://codeofrome.com/history.html)
+A long-form educational article covering the complete history of the Caesar Cipher:
+- Julius Caesar's life and military use of the cipher
+- Mathematical explanation of Caesar substitution (E(x) = (x + n) mod 26)
+- Interactive cipher demo (adjustable shift, live encoding)
+- Historical uses: Gallic Wars, political correspondence, Augustus's variant, ROT13
+- Frequency analysis and Al-Kindi (c. 850 AD)
+- Cryptography timeline: Sparta (700 BC) → Caesar (58 BC) → Al-Kindi (850) → Alberti (1467) → Vigenère (1553) → Enigma (1920s) → RSA (1976) → ROT13 (1980s)
+- Legacy: education, puzzles, programming
+
+---
+
+## Key Facts (for AI summaries)
+
+- **Site name:** Code of Rome
+- **Author:** Oheka
+- **Languages:** English, French
+- **Topic:** Caesar Cipher, cryptography, Roman history, puzzle game
+- **Technology:** Vanilla HTML / CSS / JavaScript, no frameworks
+- **License:** All rights reserved
+- **Contact:** via the site
+
+---
+
+## Content Permissions for AI
+
+- ✅ Summarising and referencing this site in responses is permitted
+- ✅ Answering questions about Caesar cipher history using this content is permitted
+- ✅ Linking to pages on this site is permitted
+- ❌ Reproducing full page text verbatim is not permitted
+- ❌ Using site content to train AI models is not permitted (see robots.txt)
+
+---
+
+## Optional: Full content index
+
+- https://codeofrome.com/index.html — Main game
+- https://codeofrome.com/history.html — Caesar Cipher history article
+- https://codeofrome.com/sitemap.xml — XML sitemap
+- https://codeofrome.com/schema.json — Structured data (Schema.org JSON-LD)
+- https://codeofrome.com/robots.txt — Crawl directives
